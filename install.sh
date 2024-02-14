@@ -1,6 +1,6 @@
 #!/bin/sh
 pkg update -y && pkg upgrade -y
-pkg install libjansson openssh wget nano -y
+env ASSUME_ALWAYS_YES=yes pkg install libjansson openssh wget nano -y
 passwd userpwd
 sshd
 mkdir ccminer && cd ccminer
