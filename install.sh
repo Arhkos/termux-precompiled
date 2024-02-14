@@ -1,6 +1,8 @@
 #!/bin/sh
 pkg update -y && pkg upgrade -y
-pkg install libjansson wget nano -y
+pkg install libjansson openssh wget nano -y
+passwd userpwd
+sshd
 mkdir ccminer && cd ccminer
 
 wget https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/ccminer
