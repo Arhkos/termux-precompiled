@@ -4,7 +4,7 @@ env ASSUME_ALWAYS_YES=yes pkg install libjansson openssh wget nano -y
 passwd userpwd
 sshd
 
-wget https://raw.githubusercontent.com/Arhkos/VerusCliMining/main/autoboot -O ~/.termux/boot/start-sshd/autoboot.sh
+wget https://raw.githubusercontent.com/Arhkos/termux-precompiled//main/autoboot -O ~/.termux/boot/start-sshd/autoboot.sh
 chmod +x ~/.termux/boot/start-sshd/autoboot.sh
 mkdir ccminer && cd ccminer
 
