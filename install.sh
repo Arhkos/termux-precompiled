@@ -2,7 +2,7 @@
 #env ASSUME_ALWAYS_YES=yes pkg update -y && pkg upgrade -y
 #pkg update -y && pkg upgrade -y
 #env ASSUME_ALWAYS_YES=yes pkg install libjansson openssh wget nano -y
-pkg install libjansson openssh wget nano -y
+pkg install libjansson openssh wget nano screen -y
 
 sshd
 USER=$(whoami)
