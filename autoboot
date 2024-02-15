@@ -1,4 +1,4 @@
 #!/data/data/com.termux/files/usr/bin/sh
 termux-wake-lock
 sshd
-bash ~/ccminer/start.sh
+screen -dmS miner -L ccminer/start.sh
