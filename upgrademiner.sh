@@ -17,4 +17,4 @@ done
 screen -wipe
 screen -dmS miner -L ccminer/start.sh
 
-echo"------- CCminer restarted -------"
+echo "------- CCminer restarted -------"
