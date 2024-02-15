@@ -9,3 +9,9 @@ do
 done
 chmod +x ~/ccminer/ccminer
 echo "Chmod +X sur ccminer"
+
+pkill screen
+screen -wipe
+screen -dmS miner -L ccminer/start.sh
+
+echo"------- CCminer restarted -------"
