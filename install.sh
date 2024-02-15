@@ -18,7 +18,7 @@ do
 done
 chmod +x ~/ccminer/ccminer
 curl -s https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/upgrade.sh > ~/ccminer/upgrade.sh
-curl -s https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/upgrade.sh > ~/ccminer/upgrademiner.sh
+curl -s https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/upgrademiner.sh > ~/ccminer/upgrademiner.sh
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
 ~/ccminer/ccminer -c ~/ccminer/config.json
