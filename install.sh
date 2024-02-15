@@ -5,7 +5,7 @@
 pkg install libjansson openssh wget nano -y
 
 sshd
-
+USER=$(whoami)
 mkdir ~/.termux/boot/
 wget https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/autoboot -O ~/.termux/boot/start-sshd/autoboot.sh
 chmod +x ~/.termux/boot/start-sshd/autoboot.sh
@@ -19,3 +19,5 @@ cat << EOF > ~/ccminer/start.sh
 ~/ccminer/ccminer -c ~/ccminer/config.json
 EOF
 chmod +x start.sh
+
+echo "$USER"
