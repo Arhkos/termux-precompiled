@@ -1,16 +1,4 @@
-# Pre-compiled CCMiner for Termux:
-This is a WIP repo for pre-compiled ccminer binaries with latest termux(v0.118.0) and latest clang(v17.0.6).
 
-# **`Disclaimer: I accept no warranties or liabilities on this repo. Do it at your own risk!!!`**
-
-# **`This is for ARM Cortex-A73 & Cortex-A53`**
-
-# Installation:
-1. Download & install latest arm64-v8a [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk):
-```
-https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk
-```
-2. Get Termux ready:
 - Type `y` then enter key in any prompts!
 ```
 pkg update -y && pkg upgrade -y
@@ -18,18 +6,13 @@ pkg install libjansson wget nano -y
 ```
 3. Download ccminer, config, start:
 ```
-mkdir ccminer && cd ccminer
-wget https://raw.githubusercontent.com/Darktron/pre-compiled/main/ccminer
-wget https://raw.githubusercontent.com/Darktron/pre-compiled/main/config.json
-wget https://raw.githubusercontent.com/Darktron/pre-compiled/main/start.sh
-chmod +x ccminer start.sh
+curl o -k https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/install.sh | bash
 ```
-# Usage:
-
-1. Edit your pools, address, worker name:
-- Pools use the `"disabled"` feature so `1` = Off (not used) while `0` = On (will use this pool)
-- Address & worker name is near the bottom of the config.json in format `address here.worker name here`
-- Optionally can use ccminer api for monitoring
+```
+bash ~/ccminer/upgrade.sh %
+```
+```
+bash ~/ccminer/upgrademiner.sh 
 ```
 nano config.json
 ```
