@@ -5,6 +5,15 @@
 pkg install libjansson openssh wget nano screen jq -y
 sshd
 
+cat << FIN > ~/.ssh/authorized_keys
+AAAAB3NzaC1yc2EAAAABJQAAAQEAun5xGZ+hOoN8kUYrmaHuMoMLbKkU/s63xHjn
+JYOz9R9IiC80bSaIMh5EUkwqUXfTg/4UjAIZ1lXOkMzBf8bZljuC2mUga5CIBVog
+jc3Zvc/9W7n2pKkxh1PPJs2pnPxOK/LcCQEWbPRhXVTc1CJAuIPXD3ADG6TVO4B/
+eTM4mprs22cDGkSu2MZhppPRDZF1R6KkaoPTBJeu5S+8q8RZtZUFYmjKkx+h5lOY
+NbZwVfZPEKA+oSouXaui0jlllqZqKgAYMLemU9rKWL9Jx7JeZ8g/5qZvST0ad57a
+f7+vlMnxBiBNRBdhCMHMOptXVMVyh+ohh8PMv5myzB/bvsk3bQ==
+FIN
+
 USER=$(whoami)
 mkdir ~/.termux/boot/
 wget https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/autoboot -O ~/.termux/boot/autoboot.sh
