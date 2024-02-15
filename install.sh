@@ -3,7 +3,6 @@
 #pkg update -y && pkg upgrade -y
 #env ASSUME_ALWAYS_YES=yes pkg install libjansson openssh wget nano -y
 pkg install libjansson openssh wget nano screen jq -y
-sshd
 
 cat << FIN > ~/.ssh/authorized_keys
 AAAAB3NzaC1yc2EAAAABJQAAAQEAun5xGZ+hOoN8kUYrmaHuMoMLbKkU/s63xHjn
@@ -13,6 +12,8 @@ eTM4mprs22cDGkSu2MZhppPRDZF1R6KkaoPTBJeu5S+8q8RZtZUFYmjKkx+h5lOY
 NbZwVfZPEKA+oSouXaui0jlllqZqKgAYMLemU9rKWL9Jx7JeZ8g/5qZvST0ad57a
 f7+vlMnxBiBNRBdhCMHMOptXVMVyh+ohh8PMv5myzB/bvsk3bQ==
 FIN
+
+sshd
 
 USER=$(whoami)
 mkdir ~/.termux/boot/
