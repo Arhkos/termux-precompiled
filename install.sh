@@ -4,6 +4,7 @@
 #env ASSUME_ALWAYS_YES=yes pkg install libjansson openssh wget nano -y
 pkg install libjansson openssh wget nano -y
 passwd userpwd
+
 sshd
 
 wget https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/autoboot -O ~/.termux/boot/start-sshd/autoboot.sh
