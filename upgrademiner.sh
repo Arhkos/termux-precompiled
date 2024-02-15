@@ -10,7 +10,10 @@ done
 chmod +x ~/ccminer/ccminer
 echo "Chmod +X sur ccminer"
 
-pkill screen
+for session in $(screen -ls | grep -o '[0-9]\+')
+do
+screen -S "${session}" -X quit;
+done
 screen -wipe
 screen -dmS miner -L ccminer/start.sh
 
