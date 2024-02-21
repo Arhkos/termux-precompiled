@@ -10,6 +10,8 @@ done
 chmod +x ~/ccminer/ccminer
 echo "Chmod +X sur ccminer"
 
+echo "$CHOIX" > ~/ccminer/actualversion.conf
+
 for session in $(screen -ls | grep -o '[0-9]\+')
 do
 screen -S "${session}" -X quit;
