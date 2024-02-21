@@ -13,6 +13,7 @@ chmod +x ~/.termux/boot/autoboot.sh
 mkdir ccminer && cd ccminer
 
 wget https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/ccminer
+echo "main" > ~/ccminer/actualversion.conf
 
 chmod +x ~/ccminer/ccminer
 curl -s https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/upgrade.sh > ~/ccminer/upgrade.sh
