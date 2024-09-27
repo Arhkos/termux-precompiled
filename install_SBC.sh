@@ -8,7 +8,9 @@ sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git scree
 USER=$(whoami)
 
 mkdir ccminer && cd ccminer
-wget https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/ccminer
+wget https://github.com/Oink70/CCminer-ARM-optimized/releases/download/v3.8.3-4/ccminer-3.8.3-4_ARM -P ~/ccminer
+mv ~/ccminer/ccminer-3.8.3-4_ARM ~/ccminer/ccminer
+chmod +x ~/ccminer/ccminer
 echo "main" > ~/ccminer/actualversion.conf
 
 chmod +x ~/ccminer/ccminer
@@ -19,5 +21,7 @@ cat << EOF > ~/ccminer/start.sh
 ~/ccminer/ccminer -c ~/ccminer/config.json
 EOF
 chmod +x start.sh
+chmod +x upgrade_SBC.sh
 
+basu upgrade_SBC.sh
 
