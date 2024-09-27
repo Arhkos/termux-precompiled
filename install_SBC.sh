@@ -7,7 +7,7 @@ sudo apt-get -y install libcurl4-openssl-dev libjansson-dev libomp-dev git scree
 
 USER=$(whoami)
 
-
+mkdir ccminer && cd ccminer
 wget https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/ccminer
 echo "main" > ~/ccminer/actualversion.conf
 
