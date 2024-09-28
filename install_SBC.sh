@@ -16,14 +16,17 @@ echo "main" > ~/ccminer/actualversion.conf
 chmod +x ~/ccminer/ccminer
 curl -s https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/upgrade_SBC.sh > ~/ccminer/upgrade_SBC.sh
 curl -s https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/upgrademiner.sh > ~/ccminer/upgrademiner.sh
-curl -s https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/g.sh > ~/ccminer/g.sh
+curl -s https://raw.githubusercontent.com/Arhkos/termux-precompiled/main/g_SBC.sh > ~/ccminer/g_SBC.sh
 cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
 ~/ccminer/ccminer -c ~/ccminer/config.json
 EOF
 chmod +x start.sh
 chmod +x upgrade_SBC.sh
-chmod +x g.sh
+chmod +x g_SBC.sh
+
+crontab -l | { cat; echo "@reboot /root/ccminer/g_SBC.sh"; } | crontab -
+
 
 bash upgrade_SBC.sh
 
