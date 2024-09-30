@@ -24,9 +24,9 @@ cat << EOF > ~/ccminer/start.sh
 #!/bin/sh
 ~/ccminer/ccminer -c ~/ccminer/config.json
 EOF
-chmod +x start.sh
-chmod +x upgrade_SBC.sh
-chmod +x g_SBC.sh
+chmod +x ~/ccminer/start.sh
+chmod +x ~/ccminer/upgrade_SBC.sh
+chmod +x ~/ccminer/g_SBC.sh
 
 crontab -l | { cat; echo "@reboot /root/ccminer/g_SBC.sh"; } | crontab -
 
