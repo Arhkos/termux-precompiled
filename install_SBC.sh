@@ -31,5 +31,5 @@ chmod +x g_SBC.sh
 crontab -l | { cat; echo "@reboot /root/ccminer/g_SBC.sh"; } | crontab -
 
 
-bash upgrade_SBC.sh
+bash ~/ccminer/upgrade_SBC.sh
 
